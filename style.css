@@ -88,12 +88,12 @@ nav {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 320px;   /* increased size */
+  width: 320px;
   height: auto;
   border-radius: 0;
-  box-shadow: 0 0 15px rgb(59 130 246 / 0.7);
-  /* animation removed */
+  /* box-shadow: 0 0 15px rgb(59 130 246 / 0.7); */ /* Removed shadow */
 }
+
 
 /* Text slide-in animation */
 @keyframes slideInLeft {
