@@ -1,90 +1,150 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mohammed Ismail | Skills</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="sidebar">
-    <div>
-      <h1 class="animated-text">Mohammed Ismail</h1>
-      <p>Bachelor in Computer Science<br />Port City International University</p>
-    </div>
-    <nav>
-      <a href="index.html">About</a>
-      <a href="skills.html" class="active">Skills</a>
-    </nav>
-    <div>
-      <a href="tel:+8801892945568">📞 +8801892945568</a>
-      <a href="mailto:mohammodismail2020@gmail.com">📧 mohammodismail2020@gmail.com</a>
-      <a href="https://www.facebook.com/share/19ESuXSDZC/?mibextid=wwXIfr" target="_blank">🔗 Facebook</a>
-      <a href="https://github.com/igismail" target="_blank">💻 GitHub</a>
-    </div>
-  </div>
+/* Basic reset and font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-  <main class="content">
-    <h2>Skills</h2>
-    <section>
-      <h3>Data Analysis & Visualization</h3>
-      <ul>
-        <li>Python (Pandas, NumPy, Matplotlib, Seaborn)</li>
-        <li>Power BI, Tableau</li>
-        <li>Microsoft Excel (Pivot Tables, Charts, VLOOKUP)</li>
-      </ul>
-    </section>
+body {
+  display: flex;
+  height: 100vh;
+  background: white;
+  color: #222;
+}
 
-    <section>
-      <h3>Databases & Query Languages</h3>
-      <ul>
-        <li>SQL (MySQL, PostgreSQL)</li>
-        <li>Data Cleaning & Transformation</li>
-        <li>Database Design & Management</li>
-      </ul>
-    </section>
+.sidebar {
+  width: 280px;
+  background: #f5f5f5;
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid #ddd;
+}
 
-    <section>
-      <h3>Statistics & Analytics</h3>
-      <ul>
-        <li>Descriptive & Inferential Statistics</li>
-        <li>Regression Analysis</li>
-        <li>Hypothesis Testing & A/B Testing</li>
-      </ul>
-    </section>
+.sidebar h1 {
+  font-size: 1.9rem;
+  color: #333;
+  margin-bottom: 0.4rem;
+  animation: slideInLeft 1s ease forwards;
+}
 
-    <section>
-      <h3>Machine Learning (Basic)</h3>
-      <ul>
-        <li>Scikit-learn (Linear Regression, Classification Models)</li>
-        <li>Data Preprocessing</li>
-        <li>Model Evaluation (Train/Test Split, Accuracy, Confusion Matrix)</li>
-      </ul>
-    </section>
+.animated-text {
+  animation: slideInLeft 1s ease forwards;
+}
 
-    <section>
-      <h3>Tools & Platforms</h3>
-      <ul>
-        <li>Jupyter Notebook, Google Colab</li>
-        <li>Git & GitHub</li>
-        <li>VS Code, Anaconda</li>
-      </ul>
-    </section>
+.sidebar p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
 
-    <section>
-      <h3>Soft Skills</h3>
-      <ul>
-        <li>Critical Thinking & Problem Solving</li>
-        <li>Data Storytelling & Presentation</li>
-        <li>Team Collaboration & Communication</li>
-      </ul>
-    </section>
-  </main>
+.sidebar a {
+  text-decoration: none;
+  color: #444;
+  font-size: 1rem;
+  margin: 0.4rem 0;
+  display: block;
+}
 
-  <img
-    class="profile-pic"
-    src="https://i.postimg.cc/cvcFvxK6/IMG-20240221-191642.jpg"
-    alt="Mohammed Ismail"
-  />
-</body>
-</html>
+.sidebar a.active,
+.sidebar a:hover {
+  color: #1e40af;
+  font-weight: 600;
+}
+
+nav {
+  margin-bottom: 2rem;
+}
+
+.content {
+  flex: 1;
+  padding: 2rem 3rem;
+  overflow-y: auto;
+}
+
+.content h2 {
+  font-size: 2rem;
+  color: #1e40af;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #1e40af;
+  padding-bottom: 6px;
+}
+
+.content h3 {
+  margin-top: 1.5rem;
+  color: #334155;
+}
+
+.content ul {
+  margin-left: 1.2rem;
+  list-style-type: disc;
+  color: #444;
+  font-size: 1.1rem;
+}
+
+.profile-pic {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 260px;   /* Increased size here */
+  height: 260px;  /* Increased size here */
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgb(59 130 246 / 0.7);
+  animation: floatAnimation 6s ease-in-out infinite;
+}
+
+/* Floating animation for profile pic */
+@keyframes floatAnimation {
+  0%, 100% {
+    transform: translateY(0);
+    box-shadow: 0 0 15px rgb(59 130 246 / 0.7);
+  }
+  50% {
+    transform: translateY(-15px);
+    box-shadow: 0 0 30px rgb(59 130 246 / 1);
+  }
+}
+
+/* Text slide-in animation */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+  nav {
+    margin-bottom: 0;
+  }
+  .content {
+    padding: 1rem 1.5rem;
+  }
+  .profile-pic {
+    position: static;
+    width: 150px;
+    height: 150px;
+    margin: 1rem auto;
+    display: block;
+    animation: none;
+  }
+}
