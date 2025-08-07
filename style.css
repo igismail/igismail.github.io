@@ -65,8 +65,9 @@ ul {
   position: absolute;
   top: 20px;
   right: 20px;
-  height: 160px;
+  height: 192px; /* 160px + 20% = 192px */
   width: auto;
   border: none;
   border-radius: 0;
 }
+
