@@ -88,23 +88,11 @@ nav {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 260px;
+  width: 320px;   /* increased size */
   height: auto;
   border-radius: 0;
   box-shadow: 0 0 15px rgb(59 130 246 / 0.7);
-  animation: floatAnimation 6s ease-in-out infinite;
-}
-
-/* Floating animation for profile pic */
-@keyframes floatAnimation {
-  0%, 100% {
-    transform: translateY(0);
-    box-shadow: 0 0 15px rgb(59 130 246 / 0.7);
-  }
-  50% {
-    transform: translateY(-15px);
-    box-shadow: 0 0 30px rgb(59 130 246 / 1);
-  }
+  /* animation removed */
 }
 
 /* Text slide-in animation */
@@ -140,10 +128,9 @@ nav {
   }
   .profile-pic {
     position: static;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: auto;
     margin: 1rem auto;
     display: block;
-    animation: none;
   }
 }
