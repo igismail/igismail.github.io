@@ -58,31 +58,33 @@ nav {
   margin-bottom: 2rem;
 }
 
-.content {
-  flex: 1;
-  padding: 2rem 3rem;
-  overflow-y: auto;
+.contact-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 2rem;
 }
 
-.content h2 {
-  font-size: 2rem;
+.contact-vertical h2 {
+  font-size: 1.4rem;
   color: #1e40af;
-  margin-bottom: 1rem;
-  border-bottom: 3px solid #1e40af;
-  padding-bottom: 6px;
+  margin-bottom: 0.5rem;
 }
 
-.content h3 {
-  margin-top: 1.5rem;
-  color: #334155;
-}
-
-.content ul {
-  margin-left: 1.2rem;
-  list-style-type: disc;
+.contact-vertical a {
   color: #444;
-  font-size: 1.1rem;
+  text-decoration: none;
+  font-size: 1rem;
+  padding-left: 6px;
+  border-left: 3px solid transparent;
+  transition: border-color 0.3s ease;
 }
+
+.contact-vertical a:hover {
+  border-left: 3px solid #1e40af;
+  color: #1e40af;
+}
+
 
 .profile-pic {
   position: fixed;
