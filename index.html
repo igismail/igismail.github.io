@@ -33,6 +33,7 @@
       font-size: 26px;
       font-weight: 700;
       margin-bottom: 10px;
+      animation: fadeIn 2s ease-in-out;
     }
 
     .sidebar p {
@@ -40,25 +41,13 @@
       margin-bottom: 30px;
     }
 
-    .sidebar .contact-links {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
     .sidebar a {
       color: #333;
       text-decoration: none;
-      font-size: 15px;
-      padding: 8px 12px;
-      background-color: #fff;
-      border-radius: 6px;
-      border: 1px solid #ddd;
-      transition: all 0.3s ease;
-    }
-
-    .sidebar a:hover {
-      background-color: #eaeaea;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
     }
 
     .content {
@@ -70,6 +59,7 @@
 
     .section {
       margin-bottom: 40px;
+      animation: fadeInUp 1.5s ease forwards;
     }
 
     .section h2 {
@@ -86,10 +76,20 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      width: 150px;
+      width: 135px; /* reduced size */
       height: auto;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -99,13 +99,14 @@
       <h1>Mohammed Ismail</h1>
       <p>Bachelor in Computer Science<br>Port City International University</p>
     </div>
-    <div class="contact-links">
+    <div>
       <a href="tel:+8801892945568">📞 +8801892945568</a>
       <a href="mailto:mohammodismail2020@gmail.com">📧 mohammodismail2020@gmail.com</a>
       <a href="https://www.facebook.com/share/19ESuXSDZC/?mibextid=wwXIfr" target="_blank">🔗 Facebook</a>
       <a href="https://github.com/igismail" target="_blank">💻 GitHub</a>
     </div>
   </div>
+
   <div class="content">
     <div class="section">
       <h2>Skills</h2>
@@ -119,6 +120,7 @@
       </ul>
     </div>
   </div>
+
   <img class="profile-pic" src="https://i.postimg.cc/QMHdZhYx/iss.png" alt="Profile Picture">
 </body>
 </html>
