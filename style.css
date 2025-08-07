@@ -88,10 +88,9 @@ nav {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 260px;   /* Increased size here */
-  height: 260px;  /* Increased size here */
-  border-radius: 50%;
-  object-fit: cover;
+  width: 260px;
+  height: auto;
+  border-radius: 0;
   box-shadow: 0 0 15px rgb(59 130 246 / 0.7);
   animation: floatAnimation 6s ease-in-out infinite;
 }
