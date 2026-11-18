@@ -1,4 +1,4 @@
-# Ismails Showcase
+# Ismail's Showcase
 
 Build a modern, professional, highly attractive single-page portfolio website for a Flutter App Developer named Mohammed Ismail. The goal is to impress recruiters and clients in under 30 seconds. Use React + TypeScript + Tailwind CSS + shadcn/ui + Framer Motion, and make it fully responsive (mobile first).
 
