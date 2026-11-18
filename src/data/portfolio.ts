@@ -2,6 +2,8 @@
  * All portfolio content lives here. Edit text, links and lists in this file;
  * the page components read from it and need no changes.
  */
+import portraitAsset from "@/assets/mohammed-ismail-portrait.jpg.asset.json";
+import avatarAsset from "@/assets/mohammed-ismail-avatar.jpg.asset.json";
 import {
   Code2,
   Smartphone,
@@ -21,8 +23,9 @@ export const profile = {
   tagline: "I build fast, responsive cross-platform mobile apps with Flutter and Dart.",
   availability: "Open to opportunities",
   location: "Chattogram, Bangladesh",
-  /** Put your photo in /public (e.g. /profile.jpg) and set the path here. Empty = monogram. */
-  photo: "",
+  /** Your photo: square portrait for the hero circle, plus the tighter crop used in the small logo badge. */
+  photo: portraitAsset.url,
+  avatar: avatarAsset.url,
   cvUrl: "/Mohammed_Ismail_CV.pdf",
   email: "mohammodismail2020@gmail.com",
   phone: "+880 1892-945568",
