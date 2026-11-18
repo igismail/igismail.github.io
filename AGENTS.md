@@ -28,3 +28,9 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+<!-- AGENT-MEMORY:BEGIN -->
+- All portfolio copy, links and lists live in `src/data/portfolio.ts`; components in `src/components/portfolio/` only read from it. Why: the owner edits content in one place.
+- Theme is a `dark` class on `<html>` set before paint by an inline script in `__root.tsx` and toggled by `useTheme`. Why: avoids a flash of the wrong theme with SSR.
+- Contact form validation and mailto building live in `src/lib/contact.ts` with tests beside it. Why: keeps the rules testable without the UI.
+<!-- AGENT-MEMORY:END -->
