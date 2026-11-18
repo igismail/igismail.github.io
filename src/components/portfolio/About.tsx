@@ -41,7 +41,7 @@ export function About() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-80px" }}
-          className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1"
+          className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1"
         >
           {about.stats.map((stat) => (
             <motion.li

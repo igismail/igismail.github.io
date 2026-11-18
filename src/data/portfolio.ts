@@ -46,11 +46,10 @@ export const navLinks = [
 export const heroBadges = ["Flutter", "Dart", "Firebase", "Arduino"];
 
 export const about = {
-  text: "Motivated and detail-oriented Computer Science & Engineering student at Port City International University (CGPA 3.53) with hands-on experience building responsive cross-platform mobile apps using Flutter and Dart, plus embedded systems projects with Arduino. Strong in problem solving, communication and task management, and comfortable in remote or team-based environments.",
+  text: "Motivated and detail-oriented Computer Science & Engineering student at Port City International University with hands-on experience building responsive cross-platform mobile apps using Flutter and Dart, plus embedded systems projects with Arduino. Strong in problem solving, communication and task management, and comfortable in remote or team-based environments.",
   stats: [
-    { value: "3+", label: "Projects", caption: "Shipped mobile & embedded builds" },
+    { value: "10+", label: "Projects", caption: "Shipped mobile & embedded builds" },
     { value: "Flutter", label: "& Dart", caption: "Primary stack for cross-platform apps" },
-    { value: "3.53", label: "CGPA", caption: "B.Sc. in CSE, Port City Int'l University" },
   ],
 };
 
@@ -159,13 +158,21 @@ export const projects: Project[] = [
   },
 ];
 
-export const education = [
+export type EducationItem = {
+  school: string;
+  place: string;
+  degree: string;
+  period: string;
+  /** Result line, e.g. "GPA 4.08". Omit it to hide the badge. */
+  score?: string;
+};
+
+export const education: EducationItem[] = [
   {
     school: "Port City International University",
     place: "Chattogram",
     degree: "B.Sc. in Computer Science and Engineering",
     period: "July 2023 – Present",
-    score: "CGPA 3.53",
   },
   {
     school: "Omorgani M.E.S College",

@@ -46,9 +46,11 @@ export function Education() {
                 <p className="inline-flex items-center gap-1.5 font-mono text-xs text-muted-foreground">
                   <CalendarDays className="size-3.5" aria-hidden /> {item.period}
                 </p>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-brand px-3 py-1 text-xs font-semibold text-brand-foreground">
-                  <Award className="size-3.5" aria-hidden /> {item.score}
-                </span>
+                {item.score ? (
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-brand px-3 py-1 text-xs font-semibold text-brand-foreground">
+                    <Award className="size-3.5" aria-hidden /> {item.score}
+                  </span>
+                ) : null}
               </div>
               <h3 className="mt-3 text-lg font-bold sm:text-xl">{item.degree}</h3>
               <p className="mt-1 text-foreground/85">{item.school}</p>

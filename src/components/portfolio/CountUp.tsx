@@ -1,7 +1,7 @@
 import { animate, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-/** Animates the leading number of a value like "3+" or "3.53"; non-numeric values render as-is. */
+/** Animates the leading number of a value like "10+" or "4.08"; non-numeric values render as-is. */
 export function CountUp({ value }: { value: string }) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
