@@ -3,11 +3,11 @@ import { useEffect, useState } from "react";
 /** Types and deletes each word in turn. Starts fully typed so the first role is in the HTML. */
 export function TypingText({ words }: { words: string[] }) {
   const [index, setIndex] = useState(0);
-  const [text, setText] = useState(words[0]);
+  const [text, setText] = useState(words[0] ?? "");
   const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
-    const word = words[index];
+    const word = words[index] ?? "";
     let delay = deleting ? 38 : 75;
     let step: () => void;
 

@@ -9,13 +9,15 @@ export function CountUp({ value }: { value: string }) {
   const [display, setDisplay] = useState(value);
 
   useEffect(() => {
-    if (!match || !inView) return;
-    const target = parseFloat(match[1]);
-    const decimals = match[1].split(".")[1]?.length ?? 0;
+    const num = match?.[1];
+    if (!num || !inView) return;
+    const suffix = match?.[2] ?? "";
+    const target = parseFloat(num);
+    const decimals = num.split(".")[1]?.length ?? 0;
     const controls = animate(0, target, {
       duration: 1.4,
       ease: [0.22, 1, 0.36, 1],
-      onUpdate: (v) => setDisplay(`${v.toFixed(decimals)}${match[2]}`),
+      onUpdate: (v) => setDisplay(`${v.toFixed(decimals)}${suffix}`),
     });
     return () => controls.stop();
     // eslint-disable-next-line react-hooks/exhaustive-deps
